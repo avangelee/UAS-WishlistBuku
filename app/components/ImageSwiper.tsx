@@ -18,6 +18,12 @@ export default function ImageSwiper() {
         pagination={{ clickable: true }}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         modules={[Navigation, Pagination, Autoplay]}
+         breakpoints={{
+    320: { slidesPerView: 2 },
+    640: { slidesPerView: 3 },
+    768: { slidesPerView: 4 },
+    1024: { slidesPerView: 6 },
+  }}
         className="rounded-xl"
       >
        <SwiperSlide>
@@ -26,7 +32,7 @@ export default function ImageSwiper() {
                 <img
                     src="/HP3.jpeg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -37,7 +43,7 @@ export default function ImageSwiper() {
                 <img
                     src="/HP1.webp"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -48,7 +54,7 @@ export default function ImageSwiper() {
                 <img
                     src="/HP8.webp"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -59,7 +65,7 @@ export default function ImageSwiper() {
                 <img
                     src="/Lorax.jpg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -70,7 +76,7 @@ export default function ImageSwiper() {
                 <img
                     src="/TentangKamu.jpg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -81,7 +87,7 @@ export default function ImageSwiper() {
                 <img
                     src="/MidnightLibrary.jpg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -92,7 +98,7 @@ export default function ImageSwiper() {
                 <img
                     src="/Hello.jpg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -103,7 +109,7 @@ export default function ImageSwiper() {
                 <img
                     src="/TheCat.jpeg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -114,7 +120,7 @@ export default function ImageSwiper() {
                 <img
                     src="/H4.webp"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -125,7 +131,7 @@ export default function ImageSwiper() {
                 <img
                     src="/IkanDilangit.jpg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -136,7 +142,7 @@ export default function ImageSwiper() {
                 <img
                     src="/KapanNanti.jpg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -147,7 +153,7 @@ export default function ImageSwiper() {
                 <img
                     src="/PulauBatu.jpg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -158,7 +164,7 @@ export default function ImageSwiper() {
                 <img
                     src="/TanahLada.avif"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -169,7 +175,7 @@ export default function ImageSwiper() {
                 <img
                     src="/KitaPergiHariIni.jpg"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>
@@ -180,7 +186,7 @@ export default function ImageSwiper() {
                 <img
                     src="/Jakarta.webp"
                     alt="Banner 1"
-                    className="w-40 h-64 object-cover rounded-xl cursor-pointer"
+                    className="w-full max-w-[160px] aspect-[2/3] object-cover rounded-xl cursor-pointer"
                 />
             </Link>
          </div>

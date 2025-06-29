@@ -1,17 +1,10 @@
 'use client';
 import StarRating from '@/app/components/StarRating';
 import { supabase } from '@/lib/supabaseClient';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function KitaPergiHariIniDetail() {
   const [added, setAdded] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
-
-  useEffect(() => {
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      if (user) setUserId(user.id);
-    });
-  }, []);
 
   async function addToWishlist() {
     const { data: { user } } = await supabase.auth.getUser();
@@ -52,27 +45,13 @@ export default function KitaPergiHariIniDetail() {
         >
           {added ? 'Sudah di Wishlist' : 'Tambah ke Wishlist'}
         </button>
-
-        {userId && (
-          <div className="mt-4 text-center">
-            <span className="text-sm text-gray-600">Bagikan Wishlist:&nbsp;</span>
-            <a
-              href={`/wishlist/${userId}`}
-              className="text-pink-600 underline break-all"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {`${typeof window !== 'undefined' ? window.location.origin : ''}/wishlist/${userId}`}
-            </a>
-          </div>
-        )}
       </div>
 
       <div className="flex-1 flex flex-col justify-center">
         <h1 className="text-3xl font-bold text-pink-800">Kita Pergi Hari Ini</h1>
         <h2 className="pb-3 font-bold text-pink-500">Ziggy Zezsyazeoviennazabrizkie</h2>
         <p className="text-gray-700 text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Suspendisse potenti. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.
         </p>
       </div>
     </div>

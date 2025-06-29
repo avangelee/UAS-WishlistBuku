@@ -40,7 +40,6 @@ export default function TheCatDetail() {
   return (
     <div>
       <div className="container mx-auto px-4 py-10 flex flex-col md:flex-row gap-10">
-        {/* Kiri: Cover + Rating + Tombol */}
         <div className="flex flex-col items-center md:w-1/3">
           <img
             src="/TheCat.jpeg"
@@ -56,22 +55,8 @@ export default function TheCatDetail() {
             {added ? 'Sudah di Wishlist' : 'Tambah ke Wishlist'}
           </button>
 
-          {userId && (
-            <div className="mt-4 text-center">
-              <span className="text-sm text-gray-600">Bagikan Wishlist:&nbsp;</span>
-              <a
-                href={`/wishlist/${userId}`}
-                className="text-pink-600 underline break-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {`${typeof window !== 'undefined' ? window.location.origin : ''}/wishlist/${userId}`}
-              </a>
-            </div>
-          )}
         </div>
 
-        {/* Kanan: Info Buku */}
         <div className="flex-1 flex flex-col justify-center">
           <h1 className="text-3xl font-bold text-pink-800">The Cat in the Hat</h1>
           <h2 className="pb-3 font-bold text-pink-500">Dr. Seuss</h2>

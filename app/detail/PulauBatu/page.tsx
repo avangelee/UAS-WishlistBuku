@@ -1,17 +1,10 @@
 'use client';
 import StarRating from '@/app/components/StarRating';
 import { supabase } from '@/lib/supabaseClient';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function PulauBatuDetail() {
   const [added, setAdded] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
-
-  useEffect(() => {
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      if (user) setUserId(user.id);
-    });
-  }, []);
 
   async function addToWishlist() {
     const { data: { user } } = await supabase.auth.getUser();
@@ -31,7 +24,6 @@ export default function PulauBatuDetail() {
 
     if (error) {
       alert(`Gagal menambah ke wishlist: ${error.message}`);
-      return;
     } else {
       setAdded(true);
     }
@@ -43,7 +35,7 @@ export default function PulauBatuDetail() {
         <div className="flex flex-col items-center md:w-1/3">
           <img
             src="/PulauBatu.jpg"
-            alt="Pulau Batu Diatas Samudra Buatan"
+            alt="Pulau Batu Di Samudra Buatan"
             className="w-60 h-96 object-cover rounded-xl shadow"
           />
           <StarRating />
@@ -55,21 +47,6 @@ export default function PulauBatuDetail() {
           >
             {added ? 'Sudah di Wishlist' : 'Tambah ke Wishlist'}
           </button>
-
-          {userId && (
-  <div className="mt-4 text-center">
-    <span className="text-sm text-gray-600">Bagikan Wishlist:&nbsp;</span>
-    <a
-      href={`/wishlist/${userId}`}
-      className="text-pink-600 underline break-all"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {`${typeof window !== 'undefined' ? window.location.origin : ''}/wishlist/${userId}`}
-    </a>
-  </div>
-)}
-
         </div>
 
         <div className="flex-1 flex flex-col justify-center">
@@ -80,7 +57,7 @@ export default function PulauBatuDetail() {
             Ziggy Zezsyazeoviennazabrizkie
           </h2>
           <p className="text-gray-700 text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Suspendisse potenti.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque. Suspendisse potenti. Etiam euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget aliquam massa nisl quis neque.
           </p>
         </div>
       </div>
