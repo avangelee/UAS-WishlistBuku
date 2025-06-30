@@ -20,7 +20,7 @@ export default function Profile() {
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    router.push('/auth/register'); // ⬅️ arahkan ke register
+    router.push('/auth/register'); 
   };
 
   return (
